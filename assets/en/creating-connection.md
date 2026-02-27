@@ -705,48 +705,50 @@ Public API key for accessing the exchange API. Created in the user account on th
       
    ![Alt text](@images/binance_1.png)
 
-    Launch the app, and you'll be able to select the key type to generate. Select ``Ed25519``.
+    Launch the app, and you'll be able to select the key type to generate. Select `Ed25519`.
 
     ![Alt text](@images/binance_2.png)
 
-   Create new private and public key pairs ``Ed25519``. You can also paste an existing private key ``Ed25519`` into the text field, and the app will automatically generate a corresponding public key ``Ed25519``.
+   Create new private and public key pairs `Ed25519`. You can also paste an existing private key `Ed25519` into the text field, and the app will automatically generate a corresponding public key `Ed25519`.
 
-    Copy the keys or save the ``Ed25519`` keys to the files ``Private_key.txt`` и ``Public_key.txt``. Note that the default file extension is ``.txt``, but you can change it to another format. Do not share your private keys with anyone.
+    Copy the keys or save the `Ed25519` keys to the files `Private_key.txt` и `Public_key.txt`.
 
     Next, you need to register a key on Binance.
 
-    Log in to your Binance account and go to ``Profile`` - ``API Management``. Click ``Create API``.
+    Log in to your Binance account and go to `Profile` - `API Management`. Click `Create API`.
 
     ![Alt text](@images/binance_3.png)
 
-    Select ``Self-Generated`` and click ``Next``.
+    Select `Self-Generated` and click `Next`.
 
     ![Alt text](@images/binance_4.png)
 
-    Copy the public key ``Ed25519``, generated using the asymmetric key generator and paste it into the registration field.
+    Copy the public key `Ed25519`, generated using the asymmetric key generator and paste it into the registration field.
 
      ![Alt text](@images/binance_5.png)
 
-    Enter a name for your API key. Then click ``Next`` and complete two-factor authentication.
+    Enter a name for your API key. Then click `Next` and complete two-factor authentication.
 
     ![Alt text](@images/binance_6.png)
 
-    Use the middle part of your private key as your Viking password. For example:
+    On Viking, use the middle part of the keys. For example, for the `API Key` field.
   
     Initial key::
     ```
-    -----BEGIN PRIVATE KEY-----
+    -----BEGIN PUBLIC KEY-----
     MC6BNQAlBQYDK2VwBCIEIEDygO0EhhUR3kn+Dlwe5aZFxIkLaNDZggxey2bszX/y
-    -----END PRIVATE KEY-----
+    -----END PUBLIC KEY-----
     ```
-    What to use as your password:
-    ``MC6BNQAlBQYDK2VwBCIEIEDygO0EhhUR3kn+Dlwe5aZFxIkLaNDZggxey2bszX/y``
+   What to use:
+    `MC6BNQAlBQYDK2VwBCIEIEDygO0EhhUR3kn+Dlwe5aZFxIkLaNDZggxey2bszX/y`
+  
+  Similarly, for `Secret` use the middle part from `PRIVATE KEY`
 
     </details>
 
 ### Secret <Anchor :ids="['tc.BINANCE.ws_secret_part']" />
 
-First secret API key for accessing the exchange API. Created in the user account on the exchange website together with the corresponding public key. Located in account settings under API Management. The following permissions should be enabled: "Read Info", "Enable Trading". For margin trading, the "Enable Margin" permission should also be enabled. The key must be new and not used anywhere else previously.
+Secret API key for accessing the exchange API. Created in the user account on the exchange website together with the corresponding public key. Located in account settings under API Management. The following permissions should be enabled: "Read Info", "Enable Trading". For margin trading, the "Enable Margin" permission should also be enabled. The key must be new and not used anywhere else previously.
 
 ### Bind IP <Anchor :ids="['tc.BINANCE.bind_ip']" />
 
@@ -774,7 +776,7 @@ Public API key for accessing the exchange API. Created in the user account on th
 
 ### Secret <Anchor :ids="['tc.BINANCEFUT.ws_secret_part']" />
 
-First secret API key for accessing the exchange API. Created in the user account on the exchange website together with the corresponding public key. Located in account settings under API Management. The following permissions should be enabled: "Read Info", "Enable Trading" и "Enable Future".
+Secret API key for accessing the exchange API. Created in the user account on the exchange website together with the corresponding public key. Located in account settings under API Management. The following permissions should be enabled: "Read Info", "Enable Trading" и "Enable Future".
 
 ### Bind IP <Anchor :ids="['tc.BINANCEFUT.bind_ip']" />
 
@@ -816,7 +818,7 @@ Public API key for accessing the exchange API. Created in the user account on th
 
 ### Secret <Anchor :ids="['tc.BINANCECM.ws_secret_part']" />
 
-First secret API key for accessing the exchange API. Created in the user account on the exchange website together with the corresponding public key. Located in account settings under API Management. The following permissions should be enabled: "Read Info", "Enable Trading" and "Enable Future".
+Secret API key for accessing the exchange API. Created in the user account on the exchange website together with the corresponding public key. Located in account settings under API Management. The following permissions should be enabled: "Read Info", "Enable Trading" and "Enable Future".
 
 ### Bind IP <Anchor :ids="['tc.BINANCECM.bind_ip']" />
 
