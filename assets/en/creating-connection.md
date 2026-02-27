@@ -699,6 +699,51 @@ Indicates that your account is a margin account. If enabling this flag, ensure y
 
 Public API key for accessing the exchange API. Created in the user account on the exchange website together with the corresponding secret key. Located in account settings under API Management. The following permissions should be enabled: "Read Info", "Enable Trading". For margin trading, the "Enable Margin" permission should also be enabled. The key must be new and not used anywhere else previously.
 
+- <details>
+    <summary><i>How to generate an Ed25519 key pair for sending API requests to Binance<Anchor :ids="['creating-connection.api-key']" /></i></summary>
+    Go to the official asymmetric key generator website to download and install the latest version: https://github.com/binance/asymmetric-key-generator/releases 
+      
+   ![Alt text](@images/binance_1.png)
+
+    Launch the app, and you'll be able to select the key type to generate. Select ``Ed25519``.
+
+    ![Alt text](@images/binance_2.png)
+
+   Create new private and public key pairs ``Ed25519``. You can also paste an existing private key ``Ed25519`` into the text field, and the app will automatically generate a corresponding public key ``Ed25519``.
+
+    Copy the keys or save the ``Ed25519`` keys to the files ``Private_key.txt`` и ``Public_key.txt``. Note that the default file extension is ``.txt``, but you can change it to another format. Do not share your private keys with anyone.
+
+    Next, you need to register a key on Binance.
+
+    Log in to your Binance account and go to ``Profile`` - ``API Management``. Click ``Create API``.
+
+    ![Alt text](@images/binance_3.png)
+
+    Select ``Self-Generated`` and click ``Next``.
+
+    ![Alt text](@images/binance_4.png)
+
+    Copy the public key ``Ed25519``, generated using the asymmetric key generator and paste it into the registration field.
+
+     ![Alt text](@images/binance_5.png)
+
+    Enter a name for your API key. Then click ``Next`` and complete two-factor authentication.
+
+    ![Alt text](@images/binance_6.png)
+
+    Use the middle part of your private key as your Viking password. For example:
+  
+    Initial key::
+    ```
+    -----BEGIN PRIVATE KEY-----
+    MC6BNQAlBQYDK2VwBCIEIEDygO0EhhUR3kn+Dlwe5aZFxIkLaNDZggxey2bszX/y
+    -----END PRIVATE KEY-----
+    ```
+    What to use as your password:
+    ``MC6BNQAlBQYDK2VwBCIEIEDygO0EhhUR3kn+Dlwe5aZFxIkLaNDZggxey2bszX/y``
+
+    </details>
+
 ### Secret <Anchor :ids="['tc.BINANCE.ws_secret_part']" />
 
 First secret API key for accessing the exchange API. Created in the user account on the exchange website together with the corresponding public key. Located in account settings under API Management. The following permissions should be enabled: "Read Info", "Enable Trading". For margin trading, the "Enable Margin" permission should also be enabled. The key must be new and not used anywhere else previously.
